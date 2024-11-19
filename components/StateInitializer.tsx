@@ -21,7 +21,7 @@ const StateInitializer: React.FC = () => {
         push(`/${getStartRoute()}`)
       }
     }
-  }, [dispatch])
+  }, [dispatch, push])
 
   return null
 }
