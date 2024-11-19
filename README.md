@@ -56,11 +56,7 @@ This section contains descriptions of the config properties. <b>! Important note
 |---|---|---|---|
 |id|*|string|Screen ID, must be specified|
 |screenType|*|string|Screen type, the value can be selected: singleSelect, textInput, multiSelect, numberInput, infoScreen, thankYou|
-|nextScreenId||`string, null, { [key: string]: string }`|Field that points to the next screen, optional. if you need to switch to different screens depending on the answer, you can show an object as the value, in which the key will be the answer to the question, and the value will correspond to the next example: 
-`{
-  "Single": "screen_4",
-  "In a relationship": "screen_11"
-}`|
+|nextScreenId||`string, null, { [key: string]: string }`|Field that points to the next screen, optional. if you need to switch to different screens depending on the answer, you can show an object as the value, in which the key will be the answer to the question, and the value will correspond to the next example: { "Single": "screen_4", "In a relationship": "screen_11" }|
 |previousScreenId||`string | null`|Field that points to the previous screen, optional|
 |question|*|string||
 |subQuestion||string|If need to add an additional question or make a clarification|
