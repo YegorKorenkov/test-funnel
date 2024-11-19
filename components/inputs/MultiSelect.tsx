@@ -29,7 +29,7 @@ const MultiSelect: FC<Props> = ({ options, selectedValue, onSubmit }) => {
   const submit = () => {
     const valuesForSubmit = [...selectedValues]
 
-    if (!!otherValue) {
+    if (otherValue) {
       valuesForSubmit.push(otherValue)
     }
 
@@ -44,7 +44,7 @@ const MultiSelect: FC<Props> = ({ options, selectedValue, onSubmit }) => {
 
       setOtherValue(selectedValue.filter(v => !optionsValues.includes(v))[0] || '')
     }
-  }, [selectedValue])
+  }, [selectedValue, options])
 
   return (
     <div>

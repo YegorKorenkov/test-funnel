@@ -27,7 +27,12 @@ export default function QuestionScreen({ data }: { data: ScreenType }) {
     dispatch(addAnswer({ screenId, answer }))
 
     if (nextScreen) {
-      typeof nextScreen === 'object' ? router.push(`/${nextScreen[answer]}`) : router.push(`/${nextScreen}`)
+      if (typeof nextScreen === 'object') {
+        router.push(`/${nextScreen[answer]}`)
+        return
+      }
+
+      router.push(`/${nextScreen}`)
     }
   }
 

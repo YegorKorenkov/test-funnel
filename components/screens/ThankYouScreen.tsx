@@ -1,5 +1,5 @@
 import questionnaire from 'public/config.json'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 
 import { AnswersState } from 'lib/store/answersSlice/slice'
 import { replaceDynamicValues } from 'lib/utils/replaceDynamicValues'
@@ -9,6 +9,10 @@ type Props = AnswersState & {
 }
 
 const ThankYouScreen: FC<Props> = ({ answers, title }) => {
+  useEffect(() => {
+    localStorage.removeItem('answers')
+  }, [])
+
   return (
     <div>
       <h3 className='text-2xl font-bold mb-6'>{title}</h3>
