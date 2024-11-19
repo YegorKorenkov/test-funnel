@@ -44,7 +44,7 @@ Other:
     |── next.config.mjs           # Configure Next (e.g. redirects)
     └── tailwind.config.ts        # Configure Tailwind (e.g. colours)
 
-<details><summary><h2>Config properties</h2></summary>
+## Config properties
 
 This section contains descriptions of the config properties. <b>! Important note: the screen which is the first and the last, please place the first and the last in the array of the screens field accordingly</b>
 
@@ -78,7 +78,3 @@ This section contains descriptions of the config properties. <b>! Important note
 |Field|Mandatory|Type|Description|
 |---|---|---|---|
 |placeholder||string|Set placeholder for text/number input|
-
-
-
-</details>
