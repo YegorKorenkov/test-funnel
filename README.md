@@ -73,7 +73,8 @@ This section contains descriptions of the config properties. <b>! Important note
     "nextScreenId": {
         "Yes": "screen_8",
         "No": "screen_9"
-  }`
+    }
+ }`
 
 
 </details>
