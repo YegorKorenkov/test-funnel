@@ -1,3 +1,6 @@
+## Deploy
+[Link](https://test-funnel-five.vercel.app)
+
 ## Running locally
 
 1. Clone the repository:
@@ -51,11 +54,11 @@ This section contains descriptions of the config properties. <b>! Important note
 |title||string|Questionnaire Title, optional|
 |screens|*|object|Screen configuration array, more details properties description below|
 
-# Screen configuration
+### Screen configuration
 |Field|Mandatory|Type|Description|
 |---|---|---|---|
 |id|*|string|Screen ID, must be specified|
-|screenType|*|string|Screen type, the value can be selected: singleSelect, textInput, multiSelect, numberInput, infoScreen, thankYou|
+|screenType|*|string|Screen type, the value can be selected: `singleSelect, textInput, multiSelect, numberInput, infoScreen, thankYou`|
 |nextScreenId||`string, null, { [key: string]: string }`|Field that points to the next screen, optional. if you need to switch to different screens depending on the answer, you can show an object as the value, in which the key will be the answer to the question, and the value will correspond to the next example: { "Single": "screen_4", "In a relationship": "screen_11" }|
 |previousScreenId||`string, null`|Field that points to the previous screen, optional|
 |question|*|string||
@@ -64,6 +67,18 @@ This section contains descriptions of the config properties. <b>! Important note
 |subText||string|Adds additional text for the `infoScreen` screen type
 |additionalParams||object|For now, only the boolean type `darkMode` field is available to change the background on the corresponding page.
 |paramsToGenerateScreenId||object|Generate next screen id based on previous answer. Example: { "screenToGet": "screen_6", "nextScreenId": { "Yes": "screen_8", "No": "screen_9" }}|
+|inputProperties|*|`TextInputType, SelectInputType, MultiSelectInputType|Properties for inputs, each type is described below|
+
+### TextInputType & MultiSelectInputType
+|Field|Mandatory|Type|Description|
+|---|---|---|---|
+|options|*|`{ value: string; label: string; dynamicValue?: string }`|Options for select component. Important note, for the "Other" option an input is displayed where you can enter a custom value.|
+
+### TextInputType
+|Field|Mandatory|Type|Description|
+|---|---|---|---|
+|placeholder||string|Set placeholder for text/number input|
+
 
 
 </details>
