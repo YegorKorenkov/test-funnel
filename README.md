@@ -72,7 +72,7 @@ This section contains descriptions of the config properties. <b>! Important note
 |subText||string|Adds additional text for the `infoScreen` screen type
 |additionalParams||object|For now, only the boolean type `darkMode` field is available to change the background on the corresponding page.
 |paramsToGenerateScreenId||object|Generate next screen id based on previous answer. Example: { "screenToGet": "screen_6", "nextScreenId": { "Yes": "screen_8", "No": "screen_9" }}|
-|inputProperties|*|`TextInputType, SelectInputType, MultiSelectInputType|Properties for inputs, each type is described below|
+|inputProperties|*|`TextInputType, SelectInputType, MultiSelectInputType`|Properties for inputs, each type is described below|
 
 ### TextInputType & MultiSelectInputType
 |Field|Mandatory|Type|Description|
