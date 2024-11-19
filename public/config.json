@@ -102,7 +102,10 @@
         ]
       },
       "previousScreenId": "screen_5",
-      "nextScreenId": "screen_7"
+      "nextScreenId": "screen_7",
+      "additionalParams": {
+        "darkMode": true
+      }
     },
     {
       "id": "screen_7",

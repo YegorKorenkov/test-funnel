@@ -36,7 +36,7 @@ const TextInput: FC<Props> = ({ value, onSubmit, type, inputProps }) => {
         type={type}
         value={inputValue}
         onChange={e => setInputValue(e.target.value)}
-        className='mb-1'
+        className='mb-1 dark:text-light-text'
         {...inputProps}
       />
       {error && <div className='text-destructive'>{error}</div>}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 import { MultiSelectInputType, ScreenType, ScreenTypes, SelectInputType, TextInputType } from 'types/data'
 
 import BackButton from './elements/BackButton'
@@ -86,7 +87,6 @@ export default function QuestionScreen({ data }: { data: ScreenType }) {
             title={data.title}
             subText={data.subText}
             buttonTitle='Next'
-            isDarkMode={data?.additionalParams?.darkMode}
             onSubmit={nextWithoutDispatch}
           />
         )
@@ -113,12 +113,26 @@ export default function QuestionScreen({ data }: { data: ScreenType }) {
     }
   }
 
+  useEffect(() => {
+    const isDarkMode = data?.additionalParams?.darkMode
+
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+
+      return () => document.documentElement.classList.remove('dark')
+    }
+  }, [data])
+
   return (
     <div className='container py-5'>
       <div className='max-w-[330px] w-full flex flex-col justify-center mx-auto'>
-        {data.question && <h3 className='text-2xl font-bold mb-6'>{replaceDynamicValues(data.question, answers)}</h3>}
+        {data.question && (
+          <h3 className='text-2xl font-bold mb-6 dark:text-light-text'>
+            {replaceDynamicValues(data.question, answers)}
+          </h3>
+        )}
 
-        {data.subQuestion && <h3 className='text-lg font-bold mb-6'>{data.subQuestion}</h3>}
+        {data.subQuestion && <h3 className='text-lg font-bold mb-6 dark:text-light-text'>{data.subQuestion}</h3>}
 
         {getInputComponentByType()}
 

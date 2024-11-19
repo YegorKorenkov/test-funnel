@@ -51,7 +51,7 @@ const MultiSelect: FC<Props> = ({ options, selectedValue, onSubmit }) => {
       {options.map(({ value, label }) => (
         <Button
           key={value}
-          className='mb-4 last-of-type:mb-0'
+          className='mb-4 last-of-type:mb-0 dark:text-purple'
           selected={value !== 'Other' ? selectedValues?.includes(value) : otherValue !== undefined}
           onClick={() => onSelect(value)}
         >
@@ -60,7 +60,12 @@ const MultiSelect: FC<Props> = ({ options, selectedValue, onSubmit }) => {
       ))}
 
       {otherValue !== undefined && (
-        <TextField value={otherValue} onChange={e => setOtherValue(e.target.value)} placeholder='Please clarify' />
+        <TextField
+          value={otherValue}
+          onChange={e => setOtherValue(e.target.value)}
+          placeholder='Please clarify'
+          className='dark:text-light-text'
+        />
       )}
 
       <Button onClick={submit} className='bg-green-100 mt-8'>
