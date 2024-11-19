@@ -1,0 +1,400 @@
+{
+  "id": "questionnaire_1",
+  "title": "Test",
+  "screens": [
+    {
+      "id": "screen_1",
+      "screenType": "singleSelect",
+      "question": "What is your gender?",
+      "inputProperties": {
+        "options": [
+          { "value": "male", "label": "Male", "dynamicValue": "Man" },
+          { "value": "female", "label": "Female", "dynamicValue": "Man" }
+        ]
+      },
+      "nextScreenId": "screen_2",
+      "previousScreenId": null
+    },
+    {
+      "id": "screen_2",
+      "screenType": "numberInput",
+      "question": "What is your age?",
+      "inputProperties": {
+        "placeholder": "Enter your age"
+      },
+      "nextScreenId": "screen_3",
+      "previousScreenId": "screen_1"
+    },
+    {
+      "id": "screen_3",
+      "screenType": "singleSelect",
+      "question": "So we can get to know you better, tell us about your relationship status.",
+      "inputProperties": {
+        "options": [
+          { "value": "Single", "label": "Single" },
+          { "value": "In a relationship", "label": "In a relationship" }
+        ]
+      },
+      "previousScreenId": "screen_2",
+      "nextScreenId": {
+        "Single": "screen_4",
+        "In a relationship": "screen_11"
+      }
+    },
+    {
+      "id": "screen_4",
+      "screenType": "singleSelect",
+      "question": "Are you a single parent?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Yes",
+            "label": "Yes",
+            "dynamicValue": "with children"
+          },
+          {
+            "value": "No",
+            "label": "No",
+            "dynamicValue": "without children"
+          }
+        ]
+      },
+      "previousScreenId": "screen_3",
+      "nextScreenId": "screen_5"
+    },
+    {
+      "id": "screen_5",
+      "screenType": "singleSelect",
+      "question": "{screen_1} {screen_4} need a slightly different approach to improve their relationship. Which statement best describes you?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "I’m very unhappy with how things are going in my relationship",
+            "label": "I’m very unhappy with how things are going in my relationship"
+          },
+          {
+            "value": "I’m unhappy with parts of my relationship, but some things are working well",
+            "label": "I’m unhappy with parts of my relationship, but some things are working well"
+          },
+          {
+            "value": "I’m generally happy in my relationship",
+            "label": "I’m generally happy in my relationship"
+          }
+        ]
+      },
+      "previousScreenId": "screen_4",
+      "nextScreenId": "screen_6"
+    },
+    {
+      "id": "screen_6",
+      "screenType": "singleSelect",
+      "question": "Do you tend to overthink?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Yes",
+            "label": "Yes"
+          },
+          {
+            "value": "No",
+            "label": "No"
+          }
+        ]
+      },
+      "previousScreenId": "screen_5",
+      "nextScreenId": "screen_7"
+    },
+    {
+      "id": "screen_7",
+      "screenType": "infoScreen",
+      "title": "So how does it work?",
+      "subText": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
+      "previousScreenId": "screen_6",
+      "paramsToGenerateScreenId": {
+        "screenToGet": "screen_6",
+        "nextScreenId": {
+          "Yes": "screen_8",
+          "No": "screen_9"
+        }
+      },
+      "additionalParams": {
+        "darkMode": true
+      }
+    },
+    {
+      "id": "screen_8",
+      "screenType": "singleSelect",
+      "question": "What is most important to you?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Success",
+            "label": "Success"
+          },
+          {
+            "value": "Romance",
+            "label": "Romance"
+          },
+          {
+            "value": "Stability",
+            "label": "Stability"
+          },
+          {
+            "value": "Freedom",
+            "label": "Freedom"
+          }
+        ]
+      },
+      "previousScreenId": "screen_7",
+      "nextScreenId": "screen_10"
+    },
+    {
+      "id": "screen_9",
+      "screenType": "singleSelect",
+      "question": "Is emotional control tricky for you?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Yes",
+            "label": "Yes"
+          },
+          {
+            "value": "Sometimes",
+            "label": "Sometimes"
+          },
+          {
+            "value": "Rarely",
+            "label": "Rarely"
+          },
+          {
+            "value": "Not at all",
+            "label": "Not at all"
+          }
+        ]
+      },
+      "previousScreenId": "screen_8",
+      "nextScreenId": "screen_10"
+    },
+    {
+      "id": "screen_10",
+      "screenType": "multiSelect",
+      "question": "Where did you hear about us?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Poster or Billboard",
+            "label": "Poster or Billboard"
+          },
+          {
+            "value": "Friend or Family",
+            "label": "Friend or Family"
+          },
+          {
+            "value": "Instagram",
+            "label": "Instagram"
+          },
+          {
+            "value": "Online TV or Streaming TV",
+            "label": "Online TV or Streaming TV"
+          },
+          {
+            "value": "Direct Mail or Package Insert",
+            "label": "Direct Mail or Package Insert"
+          },
+          {
+            "value": "TV",
+            "label": "TV"
+          },
+          {
+            "value": "Radio",
+            "label": "Radio"
+          },
+          {
+            "value": "Search Engine (Google, Bing, etc.)",
+            "label": "Search Engine (Google, Bing, etc.)"
+          },
+          {
+            "value": "Newspaper or Magazine",
+            "label": "Newspaper or Magazine"
+          },
+          {
+            "value": "Blog Post or Website Review",
+            "label": "Blog Post or Website Review"
+          },
+          {
+            "value": "Podcast",
+            "label": "Podcast"
+          },
+          {
+            "value": "Influencer",
+            "label": "Influencer"
+          },
+          {
+            "value": "Youtube",
+            "label": "Youtube"
+          },
+          {
+            "value": "Pinterest",
+            "label": "Pinterest"
+          },
+          {
+            "value": "Other",
+            "label": "Other"
+          }
+        ]
+      },
+      "previousScreenId": "screen_9",
+      "nextScreenId": "screen_end"
+    },
+    {
+      "id": "screen_11",
+      "screenType": "singleSelect",
+      "question": "Are you a parent?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Yes",
+            "label": "Yes",
+            "dynamicValue": "with children"
+          },
+          {
+            "value": "No",
+            "label": "No",
+            "dynamicValue": "without children"
+          }
+        ]
+      },
+      "previousScreenId": "screen_3",
+      "nextScreenId": "screen_12"
+    },
+    {
+      "id": "screen_12",
+      "screenType": "singleSelect",
+      "question": "{screen_1} {screen_11} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "I was unhappy with low things were going in my relationship",
+            "label": "I was unhappy with low things were going in my relationship"
+          },
+          {
+            "value": "I was unhappy with parts of my relationship, but some thing were working",
+            "label": "I was unhappy with parts of my relationship, but some thing were working"
+          },
+          {
+            "value": "I was generally happy with my relationship",
+            "label": "I was generally happy with my relationship"
+          },
+          {
+            "value": "I’ve never been in a relationship",
+            "label": "I’ve never been in a relationship"
+          }
+        ]
+      },
+      "previousScreenId": "screen_11",
+      "nextScreenId": "screen_13"
+    },
+    {
+      "id": "screen_13",
+      "screenType": "singleSelect",
+      "question": "Is your partner an introvert or extrovert?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Introvert",
+            "label": "Introvert"
+          },
+          {
+            "value": "Extrovert",
+            "label": "Extrovert"
+          },
+          {
+            "value": "A bit of both",
+            "label": "A bit of both"
+          }
+        ]
+      },
+      "previousScreenId": "screen_12",
+      "nextScreenId": "screen_14"
+    },
+    {
+      "id": "screen_14",
+      "screenType": "singleSelect",
+      "question": "What is your partner’s gender?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Male",
+            "label": "Male"
+          },
+          {
+            "value": "Female",
+            "label": "Female"
+          }
+        ]
+      },
+      "previousScreenId": "screen_13",
+      "nextScreenId": "screen_15"
+    },
+    {
+      "id": "screen_15",
+      "screenType": "singleSelect",
+      "question": "Do you agree with the statement below?",
+      "subQuestion": "“My partner and I make sex a priority in our relationship”",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Strongly agree",
+            "label": "Strongly agree"
+          },
+          {
+            "value": "Agree",
+            "label": "Agree"
+          },
+          {
+            "value": "Neutral",
+            "label": "Neutral"
+          },
+          {
+            "value": "Disagee",
+            "label": "Disagee"
+          },
+          {
+            "value": "Strongly disagree",
+            "label": "Strongly disagree"
+          }
+        ]
+      },
+      "previousScreenId": "screen_14",
+      "nextScreenId": "screen_16"
+    },
+    {
+      "id": "screen_16",
+      "screenType": "singleSelect",
+      "question": "When you think about your relationship goals, you feel...?",
+      "inputProperties": {
+        "options": [
+          {
+            "value": "Optimistic! They are totally doable, with some guidance.",
+            "label": "Optimistic! They are totally doable, with some guidance."
+          },
+          {
+            "value": "Cautious. I’ve struggled before, but I’m hopeful.",
+            "label": "Cautious. I’ve struggled before, but I’m hopeful."
+          },
+          {
+            "value": "I’m feeling a little anxious, honestly.",
+            "label": "I’m feeling a little anxious, honestly."
+          }
+        ]
+      },
+      "previousScreenId": "screen_15",
+      "nextScreenId": "screen_end"
+    },
+    {
+      "id": "screen_end",
+      "screenType": "thankYou",
+      "title": "Thank you for completing the survey!"
+    }
+  ]
+}
