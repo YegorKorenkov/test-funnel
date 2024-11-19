@@ -18,14 +18,19 @@
 Pages / Routing:
 
     ├── app                       
-    │   │
-    │   ├── [...slug]                 # Questionnaire screens pages
-    │   ├── store                     # zustand state management for tracking user favourites
-    │   └── studio                    # Sanity (Page loading - schemas and queries found in /packages/shared)   
+    │   │          
+    │   └── [...slug]                 # Questionnaire screens pages              
     ├── public                        # Public assets
     └──── config.json                 # Configuration file
     
 -----
+
+General:
+
+    |── lib                       # Utils, redux store, hooks, etc
+    └── types                     # Config data types
+
+----
 Frontend Components:
  
     │   
@@ -37,7 +42,7 @@ Frontend Components:
     │   ├── Screen.tsx            # General component to display a screen depending on its type
     │   └── StateInitializer.tsx  # Initializing Redux state from LS
   
----
+----
 Other:
 
     |── middleware                # Intercept request & responses
