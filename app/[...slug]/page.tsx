@@ -22,9 +22,11 @@ export async function generateStaticParams() {
 }
 
 const Page = async ({ params }: PageProps) => {
-  const slug = getSlugFromParams(params.slug)
+  const { slug } = await params
 
-  const data = fetchScreenDataById(slug)
+  const screenSlug = getSlugFromParams(slug)
+
+  const data = fetchScreenDataById(screenSlug)
 
   if (!data) {
     return notFound()
