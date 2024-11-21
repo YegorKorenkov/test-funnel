@@ -1,9 +1,9 @@
-import questionnaire from 'public/config.json'
+import { config } from 'configuration/config'
 
 export const getStartRoute = () => {
-  return questionnaire.screens[0].id || ''
+  return config.screens[0].id || ''
 }
 
 export const getLastRoute = () => {
-  return questionnaire.screens[questionnaire.screens.length - 1].id || ''
+  return config.screens[config.screens.length - 1].id || ''
 }

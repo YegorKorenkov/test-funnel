@@ -1,4 +1,4 @@
-import questionnaire from 'public/config.json'
+import { config } from 'configuration/config'
 import { FC, useEffect } from 'react'
 
 import { AnswersState } from 'lib/store/answersSlice/slice'
@@ -19,7 +19,7 @@ const ThankYouScreen: FC<Props> = ({ answers, title }) => {
 
       {Object.entries(answers).map(answer => (
         <div key={answer[0]} className='mb-8 last-of-type:mb-0'>
-          <p>Q:{replaceDynamicValues(questionnaire.screens.find(s => s.id === answer[0])?.question || '', answers)}</p>
+          <p>Q:{replaceDynamicValues(config.screens.find(s => s.id === answer[0])?.question || '', answers)}</p>
 
           <p>A:{typeof answer[1] === 'object' ? answer[1].join(', ') : answer[1]}</p>
         </div>
